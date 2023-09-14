@@ -1,9 +1,9 @@
-import { SyntheticEvent, useState } from 'react'
-import { Box, Container } from '@mui/system';
+import { useState } from 'react'
+
 import React from 'react';
 import Grid from '@mui/material/Grid'; 
 import { TextField, Button, Snackbar, Alert } from '@mui/material';
-import { string } from 'prop-types';
+
 import md5 from 'md5'
 
 function MacPasswd() {
@@ -26,7 +26,7 @@ function MacPasswd() {
     setAlertOpen(true)
   }
 
-  const handleAlertClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+  const handleAlertClose = (_event: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
       return;
     }
